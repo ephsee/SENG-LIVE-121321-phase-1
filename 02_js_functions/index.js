@@ -1,16 +1,16 @@
 // ✅ Declaring, Referencing, and Invoking Functions
 
-  // function playSong() {
-  //   return "playing some song";
-  // }
+  function playSong() {
+    return "playing some song";
+  }
 
   // print a reference to the 'playSong' function
 
-    // console.log(playSong);
+    console.log(playSong);
 
   // call function and evaluate logic
   
-    // console.log(playSong());
+    console.log(playSong());
 
 // ✅ Parameters vs. Arguments
 
@@ -18,25 +18,25 @@
 
   // using the playSong function again, let's define a parameter 'song'
 
-    // function playSong(song) {
-    //   return "playing some song";
-    // }
+    function playSong(song) {
+      return "playing some song";
+    }
 
   // how can we use the paramater to make our code more dynamic?
 
-    // function playSong(song) {
-    //   return `playing: ${song}`;
-    // }
+    function playSong(song) {
+      return `playing: ${song}`;
+    }
 
   // now invoke the function and pass in an argument
 
-    // console.log(
-    //   playSong("Sweet Dreams")
-    // );
+    console.log(
+      playSong("Sweet Dreams")
+    );
 
 // ✅ Arrow Functions
 
-// const squareMe = (n) => n*n;
+const squareMe = (n) => n*n;
 
 // const squareMe = (n) => {
 //   return n*n;
@@ -46,10 +46,10 @@
 
 // debugging function
 
-function log(obj) {
-  console.log(obj);
-  return obj;
-}
+// function log(obj) {
+//   console.log(obj);
+//   return obj;
+// }
 
 // ✅ First Class / Higher Order Functions
 
@@ -58,28 +58,28 @@ function log(obj) {
   // higher order function => accepts another function as a parameter or returns a function
   // https://www.codecademy.com/learn/game-dev-learn-javascript-higher-order-functions-and-iterators/modules/game-dev-learn-javascript-iterators/cheatsheet
 
-// console.log('starting now');
-// window.setTimeout(() => {
-//   console.log('2 seconds later')
-// }, 2000);
+console.log('starting now');
+window.setTimeout(() => {
+  console.log('2 seconds later')
+}, 2000);
 
 // Alternatively
 
-// function callback() {
-//   console.log('2 seconds later')
-// }
-// console.log('starting now');
-// window.setTimeout(callback, 2000);
+function callback() {
+  console.log('2 seconds later')
+}
+console.log('starting now');
+window.setTimeout(callback, 2000);
 
 
-// let counter = 10;
-// const interval = window.setInterval(() => {
-//   console.log(counter);
-//   if(counter === 0) {
-//     window.clearInterval(interval);
-//   }
-//   counter--; 
-// }, 1000);
+let counter = 10;
+const interval = window.setInterval(() => {
+  console.log(counter);
+  if(counter === 0) {
+    window.clearInterval(interval);
+  }
+  counter--; 
+}, 1000);
 
 
 // ✅ Scope
@@ -123,6 +123,9 @@ function log(obj) {
 
 // CODE HERE
 
+var currentSong = "What'd I Say";
+let currentSongDuration = 290 ;
+
 // ✅ Defining Functions
 
 /* 
@@ -133,6 +136,10 @@ function log(obj) {
 
 // CODE HERE
 
+const formatDuration = (seconds) => {
+  debugger
+}
+
 // uncomment the below to test it out
 // formatDuration(216) // should return '3:36'
 
@@ -140,11 +147,18 @@ function log(obj) {
 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 
 3. Create a function called `playSong` that will take a song as an argument and set `currentSong` to the argument passed.
 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 
-
+*/
 // CODE HERE
 
-🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 
-*/
+// function playSong(song) {
+//   currentSong = song ;
+// }
+
+// playSong('Sweet Dreams');
+
+
+// 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 
+
 
 console.log("------------------------");
 console.log("⬇️ Activities ⬇️");
@@ -156,7 +170,24 @@ console.log("------------------------");
 // 🚧 Activity Step 1: 
 // Declare `interval` and `timeSpent`
 
+let interval;
+let timeSpent = 0;
+
 // CODE HERE
+
+function startTimer(seconds) {
+  let counter = seconds;
+   interval = window.setInterval(() => {
+    console.log(counter);
+    if(counter === 0) {
+      window.clearInterval(interval);
+    }
+    counter--; 
+  }, 1000);
+}
+
+
+
 
 
 // 🚧 Activity Step 2: Utilizing Callbacks with `setInterval`
