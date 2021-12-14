@@ -2,35 +2,35 @@
 
 // ✅ Using console.log()
 
-    // console.log("Hey there!");
+    console.log("Hey there!");
 
-    // let playerStatus = "stopped";
+    let playerStatus = "stopped";
 
     // let currentSong = null;
 
-    // console.log("player status is", playerStatus);
+    console.log("player status is", playerStatus);
 
 // ✅ JS Data Types (Primitive)
 
     // String
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-        // const title = "Sweet Dreams";
-        // console.log(typeof title);
+        const title = "Sweet Dreams";
+        console.log(typeof title);
 
     // Number
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
-        // const duration = 216;
-        // console.log(typeof duration);
+        const duration = 216;
+        console.log(typeof duration);
 
     // Boolean
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-        // const favorite = true;
-        // console.log(typeof favorite);
+        const favorite = true;
+        console.log(typeof favorite);
 
     // Undefined => empty value
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
-        // console.log(typeof undefined);
+        console.log(typeof undefined);
 
     // Null => absence of value
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
@@ -41,16 +41,16 @@
     // Symbol => unique identifier (rarely used)
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 
-        // let id = Symbol("test");
+        let id = Symbol("test");
 
-        // console.log(typeof id);
+        console.log(typeof id);
     
     // BigInt => numbers larger than those JS can represent with a Number
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
 
-        // let bigNum = 123456789101112131415n;
+        let bigNum = 123456789101112131415n;
 
-        // console.log(typeof bigNum);
+        console.log(typeof bigNum);
 
 // ✅ let vs. const
 
@@ -59,10 +59,10 @@
     // let 
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
 
-        // let currentSong = "Sweet Dreams";
+        let currentSong = "Sweet Dreams";
 
-        // let currentSong = "Cry Me a River";
-        // console.log(currentSong);
+        currentSong = "Cry Me a River";
+        console.log(currentSong);
 
     // const
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
@@ -79,41 +79,41 @@
 
         // const duration = 216;
 
-        // if (duration < 180) {
-        //     console.log("This song is short!");
-        // } else {
-        //     console.log("This song isn't short.");
-        // }
+        if (duration < 180) {
+            console.log("This song is short!");
+        } else {
+            console.log("This song isn't short.");
+        }
 
     // if...else if...else
 
         // const duration = 216;
 
-        // if (duration > 240) {
-        //     console.log("This song is long!");
-        // } else if (duration < 180) {
-        //     console.log("This song is short!");
-        // } else {
-        //     console.log("This song is a normal length.");
-        // }
+        if (duration > 240) {
+            console.log("This song is long!");
+        } else if (duration < 180) {
+            console.log("This song is short!");
+        } else {
+            console.log("This song is a normal length.");
+        }
         
         
     // (Date Comparisons)
     
-        // let sweetDreamsLastPlayedAt = new Date("2021-12-12 10:30 AM")
-        // let cryMeARiverLastPlayedAt = new Date("2021-12-12 11:30 AM")
-        // console.log(sweetDreamsLastPlayedAt <= cryMeARiverLastPlayedAt)
+        let sweetDreamsLastPlayedAt = new Date("2021-12-12 10:30 AM")
+        let cryMeARiverLastPlayedAt = new Date("2021-12-12 11:30 AM")
+        console.log(sweetDreamsLastPlayedAt <= cryMeARiverLastPlayedAt)
 
     // ternary operator
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
         // let favorite = true;
 
-        // { favorite ? console.log("This song is my favorite!") : console.log("This song is not my favorite!") }
+        { favorite ? console.log("This song is my favorite!") : console.log("This song is not my favorite!") }
 
-        // // or 
+        // or 
 
-        // console.log(`This song ${favorite ? 'is' : 'is not'} my favorite!`)
+        console.log(`This song ${favorite ? 'is' : 'is not'} my favorite!`)
 
 console.log("------------------------");
 console.log("⬇️ Break Out Activities ⬇️");
@@ -136,16 +136,19 @@ console.log("------------------------");
     // this line of code generates a random number between 0 and 24 and assigns its value to `time`
     const time = Math.ceil(Math.random()*24);
     // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-    // if (❓) {
+    if (time <= 12) {
 
-        // console.log(`${time} is in the AM.`)
+        console.log(`${time} is in the AM.`)
 
     // In all other cases...
-    // } else {
+    } else {
 
-        // console.log(`${time} is in the PM.`)
+        console.log(`${time} is in the PM.`)
 
-    // }
+    }
+
+    // console.log(`${time} is in the ${time < 12 'AM' : 'PM'}`)
+
     // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
 
 
