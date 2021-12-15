@@ -192,7 +192,6 @@ function startTimer(seconds) {
 
 // 🚧 Activity Step 2: Utilizing Callbacks with `setInterval`
 // Declare the function startTimer below
-
 // CODE HERE
 
 
