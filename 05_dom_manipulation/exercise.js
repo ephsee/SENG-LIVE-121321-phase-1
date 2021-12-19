@@ -1,4 +1,4 @@
-const _____ = 'MAKE SURE TO FILL ME IN!!!';
+const ____ = 'MAKE SURE TO FILL ME IN!!!';
 
 const nextId = (array) => array[array.length - 1].id + 1;
 
@@ -25,7 +25,7 @@ function getTodoListElement() {
 // Fill in the _____ below with the appropriate code.
 
 function renderTask(task) {
-  const li = _____
+  const li = document.createElement('li') ;
   li.className = 'flex justify-between';
   li.dataset.taskId = task.id;
   li.innerHTML = `
@@ -40,13 +40,13 @@ function renderTask(task) {
   </span>
   `;
   // target the .task-label and .due-date spans 
-  const taskLabelEl = _____
-  const dueDateEl = _____
+  const taskLabelEl = li.querySelector('.task-label')
+  const dueDateEl = li.querySelector('.due-date')
   // fill them in with the appropriate content from the task object
-  taskLabelEl._____ = _____;
-  dueDateEl._____ = _____;
+  taskLabelEl.textContent = task.label;
+  dueDateEl.textContent = task.dueDate;
   // add the li to the todoList within the DOM
-  _____
+  document.querySelector('#todolist').append(li)
   return li;
 }
 
