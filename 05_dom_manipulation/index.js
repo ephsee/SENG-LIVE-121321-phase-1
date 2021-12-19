@@ -153,10 +153,10 @@ function removeSongFromPlaylist(playlist, songId) {
 
 // // 👟👟👟 uncomment the lines below to test
 
-// window.setTimeout(() => {
-//   console.log('removeSongFromPlaylist', removeSongFromPlaylist(playlist, 'https://www.youtube.com/watch?v=ggGzE5KfCio'))
-//   console.log('playlist after addSongToPlaylist', copy(playlist))
-// }, 3000)
+window.setTimeout(() => {
+  console.log('removeSongFromPlaylist', removeSongFromPlaylist(playlist, 'https://www.youtube.com/watch?v=ggGzE5KfCio'))
+  console.log('playlist after addSongToPlaylist', copy(playlist))
+}, 3000)
 
 // ✅ Updating DOM elements
 
